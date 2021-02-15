@@ -70,6 +70,20 @@ public class ClientBdd implements Serializable{
         }
         return null;
     }
+    public boolean getPassTest( String cni, String pass) {
+        try{
+//            System.out.println("passs :   nnnnnn "+pass);
+            String requet="select * from insc where pass='"+pass+"' and cni='"+cni+"'";
+            cnx=Connexion.connecterDB();
+            st=cnx.createStatement();
+            rst=st.executeQuery(requet);
+            if(rst.next())// si important pour voir select si il contient des resultats
+                return true;
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+      return false;
+    }
 }
 
 

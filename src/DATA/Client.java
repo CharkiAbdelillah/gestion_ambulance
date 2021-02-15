@@ -92,6 +92,9 @@ public  class Client implements Serializable{
         String info[]=c.getClient1(c1);
         return info;
     }
+    public boolean testPass(String cni,String passAncien){
+        return c.getPassTest(cni,passAncien);
+    }
     
     
 }
