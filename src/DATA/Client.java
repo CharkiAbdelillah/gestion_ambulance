@@ -95,6 +95,9 @@ public  class Client implements Serializable{
     public boolean testPass(String cni,String passAncien){
         return c.getPassTest(cni,passAncien);
     }
+    public boolean infoUpdate(String cni,String nom,String prenom,String pass,String passConf,String email,String tele){
+        return c.updateInfoClient(cni, nom, prenom, pass, passConf, email, tele);
+    }
     
     
 }

@@ -84,6 +84,19 @@ public class ClientBdd implements Serializable{
         }
       return false;
     }
+    public boolean updateInfoClient( String cni,String nom,String prenom,String pass,String passConf,String email,String tele) {
+        try{
+//            System.out.println("passs :   nnnnnn "+pass);
+            String requet="update insc set nom='"+nom+"',prenom='"+prenom+"' ,pass='"+pass+"',pass_conf='"+passConf+"' ,email='"+email+"',tele='"+tele+"' where cni='"+cni+"'";
+            cnx=Connexion.connecterDB();
+            st=cnx.createStatement();
+            st.executeUpdate(requet);
+                return true;
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+      return false;
+    }
 }
 
 

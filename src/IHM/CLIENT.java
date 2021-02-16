@@ -798,17 +798,27 @@ public class CLIENT extends javax.swing.JFrame {
         return k.testPass(ka, pass);
     }
         public boolean updateinfo(){
-            
-            String pass=insc_pass.getText();
+            String cni=insc_cni.getText();
+            String nom =insc_nom.getText();
+            String prenom =insc_prenom.getText();
+            String passNv =nv_insc_pass.getText();
+            String passNvConf=nv_insc_pass_conf.getText();
+            String email=insc_email.getText();
+            String tele=insc_tele.getText();
             Client k=new Client();
+            return k.infoUpdate(cni, nom, prenom, passNv, passNvConf, email, tele);
         }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         if((insc_cni.getText().equals(""))||(nv_insc_pass.getText().equals(""))||(nv_insc_pass_conf.getText().equals(""))){
             JOptionPane.showMessageDialog(null, "Vous devez remplir tous les champs");
         }else{
-             if(testPass()==true)
+             if(testPass()==true){
             JOptionPane.showMessageDialog(null, "bien");
-             updateinfo();
+             if(updateinfo())
+                JOptionPane.showMessageDialog(null, "Le Mise a jour est bien fait");
+             else
+                 JOptionPane.showMessageDialog(null, "Le Mise a jour est echouer");
+             }
         else
             JOptionPane.showMessageDialog(null, "L'ancien mot de passe n'est pas correct");
         }    
