@@ -679,9 +679,17 @@ public class CLIENT extends javax.swing.JFrame {
     private void insc_prenomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insc_prenomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_insc_prenomActionPerformed
-
+    public void validePass(){
+           String pass=nv_insc_pass.getText();
+           String pass_conf=nv_insc_pass_conf.getText();
+           if(!pass.equals(pass_conf)){
+            JOptionPane.showMessageDialog(null,"Le mot de passe ne pas identique");
+                nv_insc_pass.setText("");
+                nv_insc_pass_conf.setText("");
+           }
+        }
     private void nv_insc_pass_confFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_nv_insc_pass_confFocusLost
-   
+        validePass();
     }//GEN-LAST:event_nv_insc_pass_confFocusLost
 
     private void localisationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_localisationActionPerformed
@@ -789,12 +797,21 @@ public class CLIENT extends javax.swing.JFrame {
 //        System.out.println("test pass  "+k.testPass(ka, pass));
         return k.testPass(ka, pass);
     }
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if(testPass()==true)
-            JOptionPane.showMessageDialog(null, "bien");
-        else
-            JOptionPane.showMessageDialog(null, "error");
+        public boolean updateinfo(){
             
+            String pass=insc_pass.getText();
+            Client k=new Client();
+        }
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        if((insc_cni.getText().equals(""))||(nv_insc_pass.getText().equals(""))||(nv_insc_pass_conf.getText().equals(""))){
+            JOptionPane.showMessageDialog(null, "Vous devez remplir tous les champs");
+        }else{
+             if(testPass()==true)
+            JOptionPane.showMessageDialog(null, "bien");
+             updateinfo();
+        else
+            JOptionPane.showMessageDialog(null, "L'ancien mot de passe n'est pas correct");
+        }    
     }//GEN-LAST:event_jButton3ActionPerformed
     public void showTable() throws SQLException{
         table.setRowCount(0);//pour vider Jtable avant le remplssage , bax mayb9ax est afficher omnb3d ajout i3awd est afficher mn lawal
