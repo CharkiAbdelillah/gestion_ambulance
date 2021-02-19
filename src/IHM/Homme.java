@@ -9,6 +9,7 @@ package IHM;
 import BDD.Connexion;
 import DATA.Client;
 import DATA.ClientDemmande;
+import DATA.Imprimer;
 import DATA.Stock;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -29,6 +31,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -130,6 +133,7 @@ public class Homme extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         total = new javax.swing.JTextField();
         Vider = new javax.swing.JButton();
+        btnImprimer = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -514,6 +518,13 @@ public class Homme extends javax.swing.JFrame {
             }
         });
 
+        btnImprimer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/imprimer.png"))); // NOI18N
+        btnImprimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimerActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -534,7 +545,8 @@ public class Homme extends javax.swing.JFrame {
                         .addGap(111, 111, 111)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Vider)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnImprimer)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(189, 189, 189)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -550,7 +562,9 @@ public class Homme extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Vider)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnImprimer))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -560,7 +574,7 @@ public class Homme extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Stock Vehicules", new javax.swing.ImageIcon(getClass().getResource("/IMG/car_info.png")), jPanel2); // NOI18N
@@ -1310,6 +1324,11 @@ public class Homme extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_search_clientPopupMenuWillBecomeInvisible
 
+    private void btnImprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimerActionPerformed
+        String titre="Liste des vehicules";
+        Imprimer.imprimerJtable(Jtable, titre);
+    }//GEN-LAST:event_btnImprimerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1352,6 +1371,7 @@ public class Homme extends javax.swing.JFrame {
     private javax.swing.JButton btnActualiser3;
     private javax.swing.JButton btnActualiser4;
     private javax.swing.JButton btnAjouter;
+    private javax.swing.JButton btnImprimer;
     private javax.swing.JButton btnModification;
     private javax.swing.JButton btnSupprimer;
     private javax.swing.JButton btnTerminer;
