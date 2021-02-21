@@ -163,7 +163,7 @@ public class CLIENT extends javax.swing.JFrame {
             .addGap(0, 549, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Accueil", new javax.swing.ImageIcon(getClass().getResource("/IMG/homme.png")), jPanel1); // NOI18N
+        jTabbedPane1.addTab("Accueil", new javax.swing.ImageIcon(getClass().getResource("/IMG/home.png")), jPanel1); // NOI18N
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/vh_disp.png"))); // NOI18N
 

@@ -54,10 +54,10 @@ public class LOGIN_CLIENT extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Sylfaen", 1, 12)); // NOI18N
         jLabel1.setText("Carte Nationale d'Identité(CNI)");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Sylfaen", 1, 12)); // NOI18N
         jLabel2.setText("Mots de passe");
 
         btnConnexion4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/if_check_1930264.png"))); // NOI18N

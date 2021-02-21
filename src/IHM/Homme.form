@@ -63,7 +63,7 @@
               <JTabbedPaneConstraints tabName="Accueil">
                 <Property name="tabTitle" type="java.lang.String" value="Accueil"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/homme.png"/>
+                  <Image iconType="3" name="/IMG/home.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -217,7 +217,7 @@
               <JTabbedPaneConstraints tabName="Stock Vehicules">
                 <Property name="tabTitle" type="java.lang.String" value="Stock Vehicules"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/car_info.png"/>
+                  <Image iconType="3" name="/IMG/stock_car.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -877,7 +877,7 @@
               <JTabbedPaneConstraints tabName="En cour d&apos;ex..">
                 <Property name="tabTitle" type="java.lang.String" value="En cour d&apos;ex.."/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/en_cour2.png"/>
+                  <Image iconType="3" name="/IMG/execution.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -1013,7 +1013,7 @@
               <JTabbedPaneConstraints tabName="Les Clients">
                 <Property name="tabTitle" type="java.lang.String" value="Les Clients"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/male_user_1.png"/>
+                  <Image iconType="3" name="/IMG/user1.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>
@@ -1239,7 +1239,7 @@
               <JTabbedPaneConstraints tabName="Statestique">
                 <Property name="tabTitle" type="java.lang.String" value="Statestique"/>
                 <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/IMG/stat.png"/>
+                  <Image iconType="3" name="/IMG/statistics.png"/>
                 </Property>
               </JTabbedPaneConstraints>
             </Constraint>

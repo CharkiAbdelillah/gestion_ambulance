@@ -74,7 +74,7 @@ public class DR extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
         );
 
-        jTabbedPane1.addTab("Accueil", new javax.swing.ImageIcon(getClass().getResource("/IMG/homme.png")), jPanel1); // NOI18N
+        jTabbedPane1.addTab("Accueil", new javax.swing.ImageIcon(getClass().getResource("/IMG/home.png")), jPanel1); // NOI18N
 
         jLabel1.setText("Message");
 

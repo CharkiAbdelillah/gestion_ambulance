@@ -252,7 +252,7 @@ public class Homme extends javax.swing.JFrame {
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.addTab("Accueil", new javax.swing.ImageIcon(getClass().getResource("/IMG/homme.png")), jPanel1); // NOI18N
+        jTabbedPane1.addTab("Accueil", new javax.swing.ImageIcon(getClass().getResource("/IMG/home.png")), jPanel1); // NOI18N
 
         Jtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -577,7 +577,7 @@ public class Homme extends javax.swing.JFrame {
                 .addContainerGap(180, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Stock Vehicules", new javax.swing.ImageIcon(getClass().getResource("/IMG/car_info.png")), jPanel2); // NOI18N
+        jTabbedPane1.addTab("Stock Vehicules", new javax.swing.ImageIcon(getClass().getResource("/IMG/stock_car.png")), jPanel2); // NOI18N
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -699,7 +699,7 @@ public class Homme extends javax.swing.JFrame {
                 .addContainerGap(234, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("En cour d'ex..", new javax.swing.ImageIcon(getClass().getResource("/IMG/en_cour2.png")), jPanel8); // NOI18N
+        jTabbedPane1.addTab("En cour d'ex..", new javax.swing.ImageIcon(getClass().getResource("/IMG/execution.png")), jPanel8); // NOI18N
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -822,7 +822,7 @@ public class Homme extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Les Clients", new javax.swing.ImageIcon(getClass().getResource("/IMG/male_user_1.png")), jPanel3); // NOI18N
+        jTabbedPane1.addTab("Les Clients", new javax.swing.ImageIcon(getClass().getResource("/IMG/user1.png")), jPanel3); // NOI18N
 
         jButton2.setText("jButton2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -848,7 +848,7 @@ public class Homme extends javax.swing.JFrame {
                 .addContainerGap(513, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Statestique", new javax.swing.ImageIcon(getClass().getResource("/IMG/stat.png")), jPanel9); // NOI18N
+        jTabbedPane1.addTab("Statestique", new javax.swing.ImageIcon(getClass().getResource("/IMG/statistics.png")), jPanel9); // NOI18N
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
