@@ -80,6 +80,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/IMG/valider.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Valider"/>
       </Properties>
       <Events>

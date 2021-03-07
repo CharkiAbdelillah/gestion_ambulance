@@ -73,6 +73,7 @@ public class INSCR_CLIENT extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMG/valider.png"))); // NOI18N
         jButton2.setText("Valider");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,8 +304,10 @@ public class INSCR_CLIENT extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         setInsc();
         if(testAdd){
-            JOptionPane.showMessageDialog(null,"L'Inscription est bient faits");
+            JOptionPane.showMessageDialog(null,"L'inscription est bient faits");
             clear();
+            this.dispose();
+            new LOGIN_CLIENT().setVisible(true);
         }
         else{
             JOptionPane.showConfirmDialog(null,"Erreur de l'inscription");
