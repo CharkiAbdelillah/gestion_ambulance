@@ -99,5 +99,8 @@ public  class Client implements Serializable{
         return c.updateInfoClient(cni, nom, prenom, pass, passConf, email, tele);
     }
     
-    
+    public String getEmail(String c1){
+        String email=c.getEmailByCni(c1);
+        return email;
+    }
 }

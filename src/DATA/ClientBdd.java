@@ -18,7 +18,7 @@ public class ClientBdd implements Serializable{
 //            Connexion c=new Connexion();
 //            c.Setconnection();
 //            Connexion.Setconnection();
-            String requet="insert into insc values('"+cni+"','"+nom+"','"+prenom+"','"+pass+"','"+pass_conf+"','"+email+"','"+tele+"')";
+            String requet="insert into insc values('"+cni+"','"+nom+"','"+prenom+"','"+pass+"','"+pass_conf+"','"+email+"','"+tele+"','0')";
             cnx=Connexion.connecterDB();
             st=cnx.createStatement();
             st.executeUpdate(requet);
@@ -96,6 +96,28 @@ public class ClientBdd implements Serializable{
             e.printStackTrace();
         }
       return false;
+    }
+    
+    public String getEmailByCni( String cni) {
+        String hah = null;
+        try{
+        String requet="select email from insc where cni='"+cni+"'";
+            cnx=Connexion.connecterDB();
+            st=cnx.createStatement();
+            rst=st.executeQuery(requet);
+//            System.out.println("client bien ajoute");
+//System.out.println("hhhhhhhhhhhaaaaaaaaaaaaaa"+cni);
+
+    while(rst.next()){
+//System.out.println("rsttttttttt "+rst.getString("cni"));
+        hah=rst.getString("email");
+        
+    }
+        return hah;
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
     }
 }
 

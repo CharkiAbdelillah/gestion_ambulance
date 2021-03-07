@@ -41,8 +41,8 @@ public class Get {
             con=Connexion.connecterDB();
             Statement stm=con.createStatement();
 
-//        String s="select count(*) from nmbr_demmande where datemois between "+deb+" and "+fin+" ";
-        String s="select count(*) from nmbr_demmande ";
+        String s="select count(*) from nmbr_demmande where datemois between "+deb+" and "+fin+" ";
+//        String s="select count(*) from nmbr_demmande ";
             ResultSet r=stm.executeQuery(s);
             while(r.next()){    
                 numberRow=r.getInt("count(*)");
